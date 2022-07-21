@@ -1,6 +1,6 @@
 # epigone707.github.io
 
-This is my [personal website](https://epigone707.github.io/) built in jekyll.
+This is my personal website built with jekyll. The link is https://epigone707.github.io/
 
 ## Reference
-This site is https://github.com/facaiy/facaiy.github.io
+Code adapted from https://github.com/facaiy/facaiy.github.io

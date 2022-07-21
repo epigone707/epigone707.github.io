@@ -3,14 +3,19 @@ layout: page
 title: About Me
 permalink: /about/
 ---
-I'm Yanfu and I'm currently pursuing a master's degree in Computer Science at the University of Michigan. I have two bachelor's degrees: an ECE degree from Shanghai Jiaotong University and a CS degree from the University of Michigan... 
+I'm Yanfu and I'm currently pursuing a master's degree in Computer Science at [Umich](https://en.wikipedia.org/wiki/University_of_Michigan). I also have two bachelor's degrees: an ECE degree from [SJTU](https://en.wikipedia.org/wiki/Shanghai_Jiao_Tong_University) and a CS degree from Umich... 
 
-Wait this is really boring why am I saying this here?
+Alright, that is boring. 
 
-Alright, I'm Yanfu and I'm currently a Solo Rank Diamond 1 player in League of Legends. I play games (especially PVP games), read manga(especially Japan and Korea), write novels(never established cuz they're all shit) and watch anime(OC Japan).
+I'm Yanfu and I'm currently a Solo Rank Diamond 1 player in League of Legends. I play games (especially PVP games like CSGO, Valorant), read manga (especially Japan and Korea), write novels (never published cuz they're all shit) and watch anime (of course Japanese animes. Chinese animes are 99% similar to my novels). 
+
+> "If you want to be happy, be." 
+> --<cite> Leo Tolstoy </cite>
+
+Have fun! Enjoy the short life of our human beings! Woooooo!
 
 
-Links:
+Some links about me:
 + [LinkedIn](https://www.linkedin.com/in/yanfu-guo/)
 + [Github](https://github.com/epigone707)
 + [Bilibili](https://space.bilibili.com/38966726)
