@@ -13,3 +13,4 @@ Since Jekyll is a static site generator, it has to build the site before we can 
 - Code adapted from https://github.com/facaiy/facaiy.github.io
 - Jekyll tutorial: https://jekyllrb.com/docs/step-by-step/01-setup/
 - Jekyll tags tutorial: https://longqian.me/2017/02/09/github-jekyll-tag/
+- Comments widget: https://utteranc.es/
