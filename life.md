@@ -17,6 +17,12 @@ permalink: /life/
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
+        <span> [
+          {% for tag in post.tags %}
+            {% capture tag_name %}{{ tag }}{% endcapture %}
+            <a href="/tag/{{ tag_name }}"><nobr>{{tag_name}}</nobr></a>
+          {% endfor %}
+        ]</span>
       </li>
     {% endfor %}
   </ul>
