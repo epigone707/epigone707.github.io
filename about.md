@@ -23,3 +23,10 @@ Some links about me:
 + [Source code of this website](https://github.com/epigone707/epigone707.github.io)
 
 <br/>
+<script src="https://utteranc.es/client.js"
+        repo="epigone707/epigone707.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
