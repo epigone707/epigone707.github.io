@@ -7,7 +7,7 @@ I'm Yanfu and I'm currently pursuing a master's degree in Computer Science at [U
 
 Alright, that is boring. 
 
-I'm Yanfu and I'm currently a Solo Rank Diamond 1 player in League of Legends. I play games (especially PVP games like CSGO, Valorant), read manga (especially Japan and Korea), write novels (never published cuz they're all shit) and watch anime (of course Japanese animes. Chinese animes are 99% similar to my novels). 
+I'm Yanfu and I'm currently a Solo Rank Diamond 1 player in League of Legends. I play games (especially PVP games like CSGO, Valorant), read manga (especially Japan and Korea), write novels (never published cuz they're all shit) and watch anime (of course Japanese animes, 99% Chinese animes are similar to my novels). 
 
 > "If you want to be happy, be." 
 > --<cite> Leo Tolstoy </cite>
@@ -20,6 +20,6 @@ Some links about me:
 + [Github](https://github.com/epigone707)
 + [Bilibili](https://space.bilibili.com/38966726)
 + [OPGG(League of Legends)](https://na.op.gg/summoners/na/AsiaNO1Support)
-
++ [Source code of this website](https://github.com/epigone707/epigone707.github.io)
 
 <br/>
