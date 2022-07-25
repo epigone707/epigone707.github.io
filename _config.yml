@@ -6,10 +6,11 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Epigone | 枫名
+title: Epigone707 | Yanfu
 email: yanfuguo2000@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  梅兰不堪苦寒地，大漠深处有瓜香。
+  The personal website for epigone707 Yanfu.
+quote: 梅兰不堪苦寒地，大漠深处有瓜香。
 baseurl: "" # the subpath of your site, e.g. /blog
 # url: "http://facaiy.com" # the base hostname & protocol for your site
 github_username:  epigone707
