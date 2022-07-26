@@ -5,8 +5,12 @@
     background: #fff;
     @extend %vertical-rhythm;
 
+    // .highlighter-rouge & {
+    //   background: $background-color;
+    // }
     .highlighter-rouge & {
-      background: $background-color;
+      background: $grey-color-light;
+      border-radius: 5px;
     }
 
     .c     { color: #998; font-style: italic } // Comment
