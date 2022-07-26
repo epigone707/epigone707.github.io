@@ -1,0 +1,31 @@
+---
+layout: default
+title: Tech
+permalink: /tech/
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+  {% assign posts_by_modify = site.categories.tech | sort:'modify' | reverse %}
+    {% for post in posts_by_modify%}
+      <li>
+        <span class="post-meta">{{ post.modify | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        <span> [
+          {% for tag in post.tags %}
+            {% capture tag_name %}{{ tag }}{% endcapture %}
+            <a href="/tag/{{ tag_name }}"><nobr>{{tag_name}}</nobr></a>
+          {% endfor %}
+        ]</span>
+      </li>
+    {% endfor %}
+  </ul>
+
+
+</div>
