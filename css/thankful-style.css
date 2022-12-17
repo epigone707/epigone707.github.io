@@ -178,15 +178,18 @@
 
 
 /* 
-    add rounded corners and padding syntax to highlighted code block
+    add rounded corners, padding syntax and horizontal scroll bar to the code block
     author: epigone707
 */
 pre.highlight {
   padding: 7px;
+  /* cause a scrolling mechanism to be provided for overflowing boxes */
+  overflow-x: auto; 
 }
 
 figure.highlight>pre {
   padding: 7px;
+  overflow-x: auto;
 }
 
 .highlight {
