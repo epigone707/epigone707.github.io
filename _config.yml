@@ -16,5 +16,4 @@ baseurl: "" # the subpath of your site, e.g. /blog
 github_username:  epigone707
 
 # Build settings
-markdown: kramdown
 google_analytics: G-2LFZDRY4E8
