@@ -18,8 +18,6 @@ I'm Yanfu and I'm currently a Solo Rank Diamond 1 player in League of Legends. I
 > "If you want to be happy, be." 
 > --<cite> Leo Tolstoy </cite>
 
-Have fun! Enjoy the short life of our human beings! Woooooo!
-
 
 Know more about me:
 + [LinkedIn](https://www.linkedin.com/in/yanfu-guo/)

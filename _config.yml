@@ -17,3 +17,9 @@ github_username:  epigone707
 
 # Build settings
 google_analytics: G-2LFZDRY4E8
+
+
+
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
