@@ -58,12 +58,12 @@ def main():
     args = parser.parse_args()
     post_dir = "_posts"
     
-    if args.filename: # usage 1: python3 util/novel_cn_formatter.py -f f1.md
+    if args.filename: # usage 1: python3 _util/novel_cn_formatter.py -f f1.md
         print("args.filename:",args.filename)
         for fname in args.filename:
             filename = os.path.join(dirname, fname)
             process(filename)
-    elif args.novel: # usage 2: python3 util/novel_cn_formatter.py -n wizard
+    elif args.novel: # usage 2: python3 _util/novel_cn_formatter.py -n wizard
 
         posts = os.listdir(post_dir)
         print(posts)
