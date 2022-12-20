@@ -27,6 +27,14 @@ Know more about me:
 + [Source code of this website](https://github.com/epigone707/epigone707.github.io)
 
 <br/>
+<!-- <script src="https://utteranc.es/client.js"
+        repo="epigone707/epigone707.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script> -->
+<!-- <div id="light-mode">
 <script src="https://utteranc.es/client.js"
         repo="epigone707/epigone707.github.io"
         issue-term="pathname"
@@ -34,3 +42,19 @@ Know more about me:
         crossorigin="anonymous"
         async>
 </script>
+</div> -->
+<div id="utterances-widget">
+</div>
+<script>
+  addUtterances();
+</script>
+
+<!-- <div id="dark-mode">
+<script src="https://utteranc.es/client.js"
+        repo="epigone707/epigone707.github.io"
+        issue-term="pathname"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+</script>
+  </div> -->
