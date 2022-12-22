@@ -1,19 +1,9 @@
+/* this css is for the dark/light mode switch */
+
+
 * {
     box-sizing: border-box;
 }
-
-/* body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    transition: background 0.2s linear;
-}
-
-body.dark {
-    background-color: #292c35;
-} */
 
 #checkbox-div {
     display: inline-block;

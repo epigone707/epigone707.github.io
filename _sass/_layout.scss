@@ -20,7 +20,7 @@
 
     &,
     &:visited {
-        color: $grey-color-dark;
+        color: var(--grey-color-dark);
     }
 }
 
@@ -43,16 +43,11 @@
         }
     }
 
-    .trigger {
-        // display: flex;
-        // flex-wrap: nowrap;
-    }
-
     @include media-query($on-palm) {
         position: absolute;
         top: 9px;
         right: $spacing-unit / 2;
-        background-color: $background-color;
+        // background-color: $background-color;
         border: 1px solid $grey-color-light;
         border-radius: 5px;
         text-align: right;
@@ -79,7 +74,6 @@
         .trigger {
             clear: both;
             display: none;
-            // display: inline-block;
         }
 
         &:hover .trigger {

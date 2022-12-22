@@ -1,3 +1,4 @@
+
 /**
  * Reset some basic elements
  */
@@ -15,8 +16,9 @@ dl, dd, ol, ul, figure {
  */
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-    color: $text-color;
-    background-color: $background-color;
+    // color: $text-color;
+    color:var(--text-color);
+    // background-color: $background-color;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
@@ -91,11 +93,11 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: var(--link-color);
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color:var(--darken-link-color);
     }
 
     &:hover {

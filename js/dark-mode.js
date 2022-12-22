@@ -19,8 +19,7 @@ function toggle_mode_switch() {
 // switch to dark mode
 function enable() {
   console.log("enable dark mode");
-  DarkReader.setFetchMethod(window.fetch)
-  DarkReader.enable();
+  document.documentElement.setAttribute('data-theme', 'dark')
   localStorage.setItem('dark-mode', 'true');
   document.getElementById("checkbox").checked = true; // display the moon icon
   changeUtterancesTheme('github-dark');
@@ -29,7 +28,7 @@ function enable() {
 // switch to light mode
 function disable() {
   console.log("disable dark mode");
-  DarkReader.disable();
+  document.documentElement.setAttribute('data-theme', 'light')
   localStorage.setItem('dark-mode', 'false');
   document.getElementById("checkbox").checked = false; // display the sun icon
   changeUtterancesTheme('github-light');
