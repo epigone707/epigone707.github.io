@@ -123,6 +123,13 @@ blockquote {
 }
 
 
+code.language-plaintext{
+    border-radius: 6px;
+    background-color: var(--inline-code-bgcolor);
+    padding: .2em .4em;
+    font-size: 85%;
+    white-space: break-spaces;
+}
 
 /**
  * Code formatting

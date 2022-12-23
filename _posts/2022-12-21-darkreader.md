@@ -7,7 +7,7 @@ tags: web
 modify: 2022-12-21 11:55:00
 ---
 # Intro
-[Darkreader](https://github.com/darkreader/darkreader) will generate a dark mode for your website. [Disqus](https://disqus.com/) is a service for web comments and discussions. 
+[Darkreader](https://github.com/darkreader/darkreader) will generate a dark mode for your website, so that developers don't need to modify any css code. [Disqus](https://disqus.com/) is a service for web comments and discussions. 
 
 However, Darkreader has bugs that cause Disqus to not work properly. This post is to remind you to not use Darkreader and Disqus at the same time. Until 2022/12/21, the bug seems still exist, though the [github issues](https://github.com/darkreader/darkreader/issues/76) about this bug were claimed to be fixed.
 
@@ -28,6 +28,8 @@ Thirdly, I refresh the page. Of course, the page is still in the dark mode. Howe
 Finally, I click the switch button to  disable darkreader and switch to the light mode. Then Disqus doesn't work properly even in light mode!
 ![d4](/assets/images/disqus-4.png)
 
-I spent 2 hours to fix this and failed. 
+I spent 2 hours to fix this and failed. I believe it's a subtle bug of Darkreader. Darkreader automatically read the color of the website and generate a dark mode for it, while Disqus also automatically scan the color of the website to determine its display mode. Therefore, some weird things happen when Darkreader and Disqus are used at the same time.
 
-I think it's a bug of Darkreader.
+# Solution?
+
+My solution is to not use Darkreader, though it is a very convenient tool. I wrote css code to generate a dark mode for my website. 

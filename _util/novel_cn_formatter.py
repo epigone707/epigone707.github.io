@@ -68,7 +68,10 @@ def main():
         posts = os.listdir(post_dir)
         print(posts)
         for post_fname in posts:
-            if post_fname[:len(args.novel)] == args.novel:
+            splited = post_fname.split("-")
+            if len(splited) < 3:
+                continue
+            if splited[3][:len(args.novel)] == args.novel:
                 filename = os.path.join(post_dir, post_fname)
                 process(filename)
 
