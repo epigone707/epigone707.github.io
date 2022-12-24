@@ -1,0 +1,27 @@
+
+<script>
+    console.log('hi');
+    let username = "guest";
+
+    $('.my-terminal').terminal({
+        iam: function (name) {
+            username = name;
+            this.echo('Hello, ' + name +
+                '. Nice to meet you. I am Yanfu, currently a master\'s student in Computer Science at Umich. I also have two bachelor\'s degrees: ECE from SJTU and CS Umich. Type `boring` if you think this is a boring self-introduction.');
+        },
+        fuck: function () {
+            this.echo('Hey ' + username + ', please do not say dirty words in my terminal.');
+        },
+        boring: function () {
+            this.echo('I\'m Yanfu and I\'m currently a Solo Rank Diamond 1 player in League of Legends. I play games (especially PVP games like CSGO, Valorant), read manga (especially JP and KR), write novels (never published cuz they\'re all shit) and watch anime (of course JP animes, 99% Chinese animes are similar to my novels).');
+        },
+        help: function () {
+            this.echo('help - get help.\n' +
+                      'iam  - introduce yourself by passing your name as the argument.');
+        },
+    }, {
+        greetings: 'Connected to server epigone707\n'
+            + 'This is a fake terminal for my blog.\n'
+            + 'try running `help` to see the list of commands\n'
+    });
+</script>
