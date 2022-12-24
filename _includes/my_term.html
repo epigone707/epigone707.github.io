@@ -1,4 +1,3 @@
-
 <script>
     console.log('hi');
     let username = "guest";
@@ -16,13 +15,39 @@
             this.echo('I\'m Yanfu and I\'m currently a Solo Rank Diamond 1 player in League of Legends. I play games (especially PVP games like CSGO, Valorant), read manga (especially JP and KR), write novels (never published cuz they\'re all shit) and watch anime (of course JP animes, 99% Chinese animes are similar to my novels).');
         },
         help: function () {
-            this.echo('help  - get help.\n' +
-                      'iam   - introduce yourself by passing your name as the argument.\n' +
-                      'clear - clear terminal.');
+            this.echo(
+                'help    - Get help.\n' +
+                'iam     - Introduce yourself by passing your name as the argument.\n' +
+                'clear   - Clear terminal.\n' +
+                'history - Print bash history.\n' +
+                'dark    - Enable dark mode.\n' + 
+                'light   - Enable light mode.\n');
+        },
+        history:function(){
+            bash_history = this.history().data();
+            let output = '';
+            for (let i = 0; i < bash_history.length; i++) {
+                output += String(i).padStart(4,' ') + " "+bash_history[i] + '\n';
+            }
+            this.echo(output);
+        },
+        dark: function () {
+            enable();
+        },
+        light:function(){
+            disable();
         },
     }, {
         greetings: 'Connected to server epigone707\n'
             + 'This is a fake terminal for my blog.\n'
-            + 'try running `help` to see the list of commands\n'
+            + 'try running `help` to see the list of commands\n',
+        prompt: '> ',
+        history: true,
+        // size of the history
+        historySize: 20,
+        // echoCommand:true,
+
+
+
     });
 </script>
