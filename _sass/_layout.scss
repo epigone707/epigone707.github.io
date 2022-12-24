@@ -24,6 +24,9 @@
     }
 }
 
+.terminal{
+    z-index:10;
+}
 .site-nav {
     float: right;
     line-height: 56px;
@@ -53,10 +56,11 @@
         text-align: right;
 
         .menu-icon {
+            
             display: block;
             float: right;
             width: 36px;
-            height: 26px;
+            height: 33px;
             line-height: 0;
             padding-top: 10px;
             text-align: center;
@@ -66,6 +70,7 @@
                 height: 15px;
 
                 path {
+                    
                     fill: $grey-color-dark;
                 }
             }
@@ -74,16 +79,22 @@
         .trigger {
             clear: both;
             display: none;
+            // z-index: 98;
+            
         }
 
         &:hover .trigger {
+            background-color: var(--background-color);
             display: block;
             padding-bottom: 5px;
+            z-index: 98;
+            background-blend-mode: screen;
         }
 
         .page-link {
             display: block;
             padding: 5px 10px;
+            // z-index: 98;
 
             &:not(:last-child) {
                 margin-right: 0;
@@ -133,23 +144,31 @@
 
 @include media-query($on-laptop) {
 
-    .footer-col-1,
-    .footer-col-2 {
-        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-        width: calc(50% - (#{$spacing-unit} / 2));
-    }
+    // .footer-col-1,
+    // .footer-col-2 {
+    //     width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+    //     width: calc(50% - (#{$spacing-unit} / 2));
+    // }
 
-    .footer-col-3 {
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width: calc(100% - (#{$spacing-unit} / 2));
-    }
+    // .footer-col-3 {
+    //     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+    //     width: calc(100% - (#{$spacing-unit} / 2));
+    // }
 }
 
 @include media-query($on-palm) {
+    .footer-col-wrapper {
+        font-size: 15px;
+        color: $grey-color;
+        margin-left: -$spacing-unit / 2;
+        display: flex;
+        flex-direction: column;
+    }
     .footer-col {
         float: none;
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width: calc(100% - (#{$spacing-unit} / 2));
+        margin-bottom: $spacing-unit / 10;
+        // width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+        // width: calc(100% - (#{$spacing-unit} / 2));
     }
 }
 

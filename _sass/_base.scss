@@ -16,9 +16,7 @@ dl, dd, ol, ul, figure {
  */
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-    // color: $text-color;
     color:var(--text-color);
-    // background-color: $background-color;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
@@ -130,38 +128,6 @@ code.language-plaintext{
     font-size: 85%;
     white-space: break-spaces;
 }
-
-/**
- * Code formatting
- */
-// pre,
-// code {
-//     font-size: 15px;
-//     border: 1px solid $grey-color-light;
-//     border-radius: 5px;
-    
-// }
-
-// code {
-//     background: $grey-color-light;
-//     padding: 1px 5px;
-// }
-
-// pre {
-//     padding: 8px 12px;
-//     overflow-x: auto;
-    
-    
-
-//     > code {
-//         border: 0;
-//         padding-right: 0;
-//         padding-left: 0;
-        
-        
-//     }
-// }
-
 
 
 /**
