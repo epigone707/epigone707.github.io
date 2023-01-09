@@ -1,11 +1,9 @@
 """
-This script will format a markdown file by adding a newline character after each newline character
+This script will format a novel post written in markdown
 """
 
-import argparse
-import os
-dirname = os.path.dirname(__file__)
-
+# usage 1: python3 _util/novel_cn_formatter.py -f f1.md
+# usage 2: python3 _util/novel_cn_formatter.py -n wizard
 
 # input file example:
 """
@@ -49,6 +47,12 @@ let's go!
 
 """
 
+import argparse
+import os
+dirname = os.path.dirname(__file__)
+
+
+
 
 
 
@@ -61,12 +65,12 @@ def main():
     args = parser.parse_args()
     post_dir = "_posts"
     
-    if args.filename: # usage 1: python3 _util/novel_cn_formatter.py -f f1.md
+    if args.filename: 
         print("args.filename:",args.filename)
         for fname in args.filename:
             filename = os.path.join(dirname, fname)
             process(filename)
-    elif args.novel: # usage 2: python3 _util/novel_cn_formatter.py -n wizard
+    elif args.novel: 
 
         posts = os.listdir(post_dir)
         print(posts)
