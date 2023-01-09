@@ -11,38 +11,41 @@ dirname = os.path.dirname(__file__)
 """
 ---
 layout: post
-title: "Build Personal Blog with Jekyll and Github Pages"
+title: "test post f1"
 category: tech
 tags: web
 modify: 2022-07-25 18:09:00
 ---
 
-# title
+1 chapter one
+say hello
+goodbye
 
-line1
-line2
-line3
+2 chapter two
+let's go!
 """
 
 # output file:
 """
 ---
 layout: post
-title: "Build Personal Blog with Jekyll and Github Pages"
+title: "test post f1"
 category: tech
 tags: web
 modify: 2022-07-25 18:09:00
 ---
 <!-- processed -->
-# title
+## 1 chapter one
+
+say hello
+
+goodbye
 
 
 
-line1
+## 2 chapter two
 
-line2
-
-line3
+let's go!
 
 """
 
@@ -80,22 +83,19 @@ def process(filename):
     with open(filename, encoding = 'utf-8') as f:
         # perform file operations
         lines = f.readlines()
-        flag = False
         start_idx = -1
         for idx, line in enumerate(lines):
             if line == "---\n" and idx != 0:
-                flag = True
                 start_idx = idx + 1
-                continue
-            if idx == start_idx:
-                if lines[idx] == "<!-- processed -->\n":
-                    print(f"{filename} has been processed, skip.")
-                    return
-                else:
-                    lines[idx] = "<!-- processed -->\n"
-                    continue
-            if flag:
-                lines[idx] += "\n"
+                break
+        if start_idx == -1 or lines[start_idx] =="<!-- processed -->\n":
+            print(f"{filename} has been processed, skip.")
+            return
+        lines[start_idx] = "<!-- processed -->\n"
+        for idx in range(start_idx+1, len(lines)):
+            if lines[idx][0] in ['0','1','2','3','4','5','6','7','8','9']:
+                lines[idx] = '## ' + lines[idx]
+            lines[idx] += "\n"
     # print(lines)
     with open(filename, "w") as f:
         lines = "".join(lines)
