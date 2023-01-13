@@ -5,47 +5,6 @@ This script will format a novel post written in markdown
 # usage 1: python3 _util/novel_cn_formatter.py -f f1.md
 # usage 2: python3 _util/novel_cn_formatter.py -n wizard
 
-# input file example:
-"""
----
-layout: post
-title: "test post f1"
-category: tech
-tags: web
-modify: 2022-07-25 18:09:00
----
-
-1 chapter one
-say hello
-goodbye
-
-2 chapter two
-let's go!
-"""
-
-# output file:
-"""
----
-layout: post
-title: "test post f1"
-category: tech
-tags: web
-modify: 2022-07-25 18:09:00
----
-<!-- processed -->
-## 1 chapter one
-
-say hello
-
-goodbye
-
-
-
-## 2 chapter two
-
-let's go!
-
-"""
 
 import argparse
 import os
@@ -89,7 +48,7 @@ def process(filename):
         lines = f.readlines()
         start_idx = -1
         for idx, line in enumerate(lines):
-            if line == "---\n" and idx != 0:
+            if line == "# 正文\n":
                 start_idx = idx + 1
                 break
         if start_idx == -1 or lines[start_idx] =="<!-- processed -->\n":
