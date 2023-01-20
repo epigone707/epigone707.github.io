@@ -39,11 +39,7 @@
         color: $text-color;
         line-height: $base-line-height;
         display: inline-block;
-
-        // Gaps between nav items, but not on the last one
-        &:not(:last-child) {
-            margin-right: 20px;
-        }
+        margin-right: 20px;
     }
 
     @include media-query($on-palm) {
@@ -78,8 +74,8 @@
             display: block;
             padding-bottom: 1px;
             background-blend-mode: screen;
-            animation: growDown 300ms ease-in-out forwards;
-            transform-origin: top center
+            animation: growDown 500ms ease-in-out forwards;
+            transform-origin: top right
         }
 
         // dropdown menu animation
@@ -87,9 +83,9 @@
             0% {
                 transform: scaleY(0)
             }
-            80% {
-                transform: scaleY(1.1)
-            }
+            // 80% {
+            //     transform: scaleY(1.1)
+            // }
             100% {
                 transform: scaleY(1)
             }
@@ -98,11 +94,8 @@
         .page-link {
             display: block;
             padding: 5px 10px;
-
-            &:not(:last-child) {
-                margin-right: 0;
-            }
-
+            
+            margin-right: 0;
             margin-left: 20px;
         }
     }

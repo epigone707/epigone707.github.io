@@ -8,6 +8,7 @@
 #checkbox-div {
     display: inline-block;
     z-index: 99;
+    margin-right: 5px;
 }
 
 .checkbox {
@@ -40,7 +41,6 @@
     left: 2px;
     border-radius: 50%;
     transition: transform 0.2s linear;
-    /* z-index: 99; */
 }
 
 /*  target the elemenent after the label*/
