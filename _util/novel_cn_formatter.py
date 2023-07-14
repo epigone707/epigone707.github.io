@@ -13,9 +13,6 @@ dirname = os.path.dirname(__file__)
 
 
 
-
-
-
 def main():
     parser = argparse.ArgumentParser(description='Input the filename.')
     parser.add_argument('-f','--filename', type=str, nargs='+',
@@ -57,7 +54,7 @@ def process(filename):
         lines[start_idx] = "<!-- processed -->\n"
         for idx in range(start_idx+1, len(lines)):
             if lines[idx][0] in ['0','1','2','3','4','5','6','7','8','9']:
-                lines[idx] = '## ' + lines[idx]
+                lines[idx] = '## ' + " ".join(lines[idx].split(" ")[:-1])
             lines[idx] += "\n"
     # print(lines)
     with open(filename, "w") as f:
