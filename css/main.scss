@@ -6,13 +6,13 @@
 // css variables
 html {
     background: var(--background-color);
+    scroll-behavior: smooth;
     --text-color: #111;
     --background-color: #fdfdfd;
 
     --link-color: #2a7ae2;
     --darken-link-color: #1b66c8; // visited link color
     --inline-code-bgcolor:rgba(175,184,193,0.2); // inline code background color
-    
 }
 
 html[data-theme='dark'] {
