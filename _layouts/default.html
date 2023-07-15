@@ -3,7 +3,7 @@
 
 {% include head.html %}
 
-<body>
+<body data-spy="scroll" data-target="#toc" data-offset="75">
 
   {% include header.html %}
 
@@ -21,6 +21,9 @@
   <script type="text/javascript">
     $(document).ready(function () {
       $('#toc').toc({ listType: 'ul' });
+      // var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+      //   target: '#toc'
+      // })
     });
   </script>
 

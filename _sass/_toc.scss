@@ -1,0 +1,9 @@
+// anchors in table of contents
+#toc-wrapper a {
+  color: rgb(108, 117, 125);
+}
+
+// the current anchor
+.active > a {
+  color: #0085a1 !important;
+}
