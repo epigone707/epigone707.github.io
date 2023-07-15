@@ -2,6 +2,8 @@
  * Site header
  */
 .site-header {
+  display: flex;
+  justify-content: space-between;
   border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
   min-height: 56px;
@@ -45,7 +47,7 @@
     margin-right: 20px;
   }
 
-  @include media-query($on-palm) {
+  @include media-query($content-width) {
     position: absolute;
     top: 9px;
     right: $spacing-unit / 2;
@@ -107,6 +109,8 @@
 .site-footer {
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer-heading {
@@ -126,26 +130,12 @@
   margin-left: -$spacing-unit / 2;
   display: flex;
   justify-content: space-between;
-  // @extend %clearfix;
 }
 
 .footer-col {
   float: left;
   margin-bottom: $spacing-unit / 2;
   padding-left: $spacing-unit / 2;
-}
-
-@include media-query($on-laptop) {
-  // .footer-col-1,
-  // .footer-col-2 {
-  //     width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-  //     width: calc(50% - (#{$spacing-unit} / 2));
-  // }
-
-  // .footer-col-3 {
-  //     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-  //     width: calc(100% - (#{$spacing-unit} / 2));
-  // }
 }
 
 @include media-query($on-palm) {
@@ -159,8 +149,18 @@
   .footer-col {
     float: none;
     margin-bottom: $spacing-unit / 10;
-    // width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    // width: calc(100% - (#{$spacing-unit} / 2));
+  }
+}
+
+.wrapper {
+  width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit;
+  // @extend %clearfix;
+  flex-shrink: 0;
+
+  @include media-query($content-width) {
+    width: 100%;
   }
 }
 
@@ -169,6 +169,9 @@
  */
 .page-content {
   padding: $spacing-unit 0;
+  display: flex;
+  justify-content: space-between;
+  overflow-wrap: break-word;
 }
 
 .page-heading {
@@ -205,10 +208,6 @@
   font-size: 42px;
   letter-spacing: -1px;
   line-height: 1;
-
-  @include media-query($on-laptop) {
-    font-size: 36px;
-  }
 }
 
 .post-content {
@@ -217,7 +216,7 @@
   h1 {
     font-size: 32px;
 
-    @include media-query($on-laptop) {
+    @include media-query($content-width) {
       font-size: 28px;
     }
   }
@@ -225,7 +224,7 @@
   h2 {
     font-size: 26px;
 
-    @include media-query($on-laptop) {
+    @include media-query($content-width) {
       font-size: 22px;
     }
   }
@@ -233,55 +232,45 @@
   h3 {
     font-size: 20px;
 
-    @include media-query($on-laptop) {
+    @include media-query($content-width) {
       font-size: 18px;
     }
   }
 }
 
-// #toc {
-//   position: sticky;
-//   top: 2rem;
-//   align-self: start;
-//   left: -10px;
-// }
-
 #toc-wrapper {
   border-left: 1px solid $grey-color-light;
-  // margin-top: 3em;
-  width: 25%;
+  width: $side-width;
   position: -webkit-sticky;
   position: sticky;
   top: 95px;
   align-self: flex-start;
-  margin-left: auto;
   overflow-y: auto;
   overflow-x: hidden;
   max-height: calc(100vh - 9rem);
-}
 
-@media (max-width: 800px) {
-  #toc-wrapper {
-    visibility: hidden;
+  @include media-query($content-width) {
+    font-size: 18px;
   }
 }
 
-#invisible-box {
-  width: 25%;
-  margin-right: auto;
+.invisible-box {
+  width: $side-width;
   visibility: hidden;
+  flex-shrink: 1;
+}
+
+@media (max-width: $content-width) {
+  #toc-wrapper {
+    visibility: hidden;
+  }
+
+  .invisible-box {
+    visibility: hidden;
+  }
 }
 
 // make sure when user clicks anchor links, the section header won't disappear behind sticky top navigation bar.
 [id] {
   scroll-margin-top: 80px; // 1
-}
-
-.page-content {
-  display: flex;
-  justify-content: space-between;
-}
-
-.wrapper {
-  width: 60%;
 }
