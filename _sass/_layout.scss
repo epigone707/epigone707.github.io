@@ -246,7 +246,7 @@
 //   left: -10px;
 // }
 
-#toc {
+#toc-wrapper {
   border-left: 1px solid $grey-color-light;
   // margin-top: 3em;
   width: 25%;
@@ -254,6 +254,13 @@
   position: sticky;
   top: 80px;
   align-self: flex-start;
+  margin-left: auto;
+}
+
+#invisible-box {
+  width: 25%;
+  margin-right: auto;
+  visibility: hidden;
 }
 
 // make sure when user clicks anchor links, the section header won't disappear behind sticky top navigation bar.
