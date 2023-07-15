@@ -246,19 +246,26 @@
 //   left: -10px;
 // }
 
-// add a bottom line to the toc
 #toc {
-  border-top: 1px solid $grey-color-light;
-  border-bottom: 1px solid $grey-color-light;
-  margin-bottom: 1rem;
+  border-left: 1px solid $grey-color-light;
+  // margin-top: 3em;
+  width: 25%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 80px;
+  align-self: flex-start;
 }
-
-// Approximate height of sticky top navigation bar.
-$sticky-breakpoint: 25em;
 
 // make sure when user clicks anchor links, the section header won't disappear behind sticky top navigation bar.
 [id] {
-  @media (min-height: $sticky-breakpoint) {
-    scroll-margin-top: 80px; // 1
-  }
+  scroll-margin-top: 80px; // 1
+}
+
+.page-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper {
+  width: 60%;
 }
