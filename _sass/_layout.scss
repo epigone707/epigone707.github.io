@@ -252,3 +252,13 @@
   border-bottom: 1px solid $grey-color-light;
   margin-bottom: 1rem;
 }
+
+// Approximate height of sticky top navigation bar.
+$sticky-breakpoint: 25em;
+
+// make sure when user clicks anchor links, the section header won't disappear behind sticky top navigation bar.
+[id] {
+  @media (min-height: $sticky-breakpoint) {
+    scroll-margin-top: 80px; // 1
+  }
+}
