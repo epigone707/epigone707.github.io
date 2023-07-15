@@ -252,9 +252,18 @@
   width: 25%;
   position: -webkit-sticky;
   position: sticky;
-  top: 80px;
+  top: 95px;
   align-self: flex-start;
   margin-left: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: calc(100vh - 9rem);
+}
+
+@media (max-width: 800px) {
+  #toc-wrapper {
+    visibility: hidden;
+  }
 }
 
 #invisible-box {
