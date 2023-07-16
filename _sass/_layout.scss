@@ -263,6 +263,7 @@
 @media (max-width: $content-width) {
   #toc-wrapper {
     visibility: hidden;
+    border-left: none;
   }
 
   .invisible-box {
