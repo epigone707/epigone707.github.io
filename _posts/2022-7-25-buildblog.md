@@ -32,11 +32,13 @@ Jekyll is a static site generator. It takes text written in your favorite markup
 
 ## 2.1 Jekyll Toy Example
 
-Follow the [Jekyll Quickstart](https://jekyllrb.com/docs/) and [Step by Step Tutorial](https://jekyllrb.com/docs/step-by-step/01-setup/) to learn basic Jekyll. This may take 20-30 minutes.
+Follow the [Jekyll Quickstart](https://jekyllrb.com/docs/) and [Step by Step Tutorial](https://jekyllrb.com/docs/step-by-step/01-setup/) to learn basic Jekyll. This may take 20 minutes.
 
-## 2.2 More Fancy
+## 2.2 Start to Build
 
-Now we want a fancy blog. The easiest way is to find your favorite template in [jekyll existing sites list](https://github.com/jekyll/jekyll/wiki/sites) and fork the repo. After you clone it to your local repository, don't forget to modify `_config.yml`. There're many beautiful exmaples on Github, find them! Don't forget to cite the source.
+Now we want a personal blog. The easiest way is to find your favorite template in [jekyll existing sites list](https://github.com/jekyll/jekyll/wiki/sites) and fork the repo. After you clone it to your local repository, don't forget to modify `_config.yml`. There're many beautiful exmaples on Github, find them! 
+
+**And of course, you can fork [my website](https://github.com/epigone707/epigone707.github.io) so that you can skip following sections!**
 
 ## 2.3 Add Tags To Each Post
 
