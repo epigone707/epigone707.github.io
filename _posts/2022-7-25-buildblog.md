@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Build Personal Blog with Jekyll and Github Pages"
-description: "Tutorial: Build a Personal Blog with Jekyll and Github Pages"
+description: "Blog that supports tags, comments, code block customization, table of contents sidebar that automatically highlight current section, etc."
 category: tech
 tags: web
 modify: 2022-07-25 18:09:00
@@ -40,11 +40,11 @@ Now we want a personal blog. The easiest way is to find your favorite template i
 
 **And of course, you can fork [my website](https://github.com/epigone707/epigone707.github.io) so that you can skip following sections!**
 
-## 2.3 Add Tags To Each Post
+## 2.3 Add Tags
 
 If you want to add tags to each of your post/article and provide a tag filter for users, follow this [Tags in jekyll + Github Tutorial](https://longqian.me/2017/02/09/github-jekyll-tag/). This may take 10-15 minustes.
 
-## 2.4 Add Comment Widget To Each Post
+## 2.4 Add Comment Widget
 
 You might be wondering, how is it possible to have a comment widget when it's a static website.
 
@@ -118,11 +118,11 @@ Github pages can't appear in Baidu search results because Baidu is banned by Git
 
 # 4 More Features
 
-## 4.1 Code Block Syntax Highlighting
+## 4.1 Code Syntax Highlighting
 
 See my tutorial [Syntax highlighting with Rouge in Jekyll](/tech/2022/12/17/tech.html).
 
-## 4.2 Add Table of Contents to Your Post
+## 4.2 Add Table of Contents
 
 ### 4.2.1 Basic TOC
 
@@ -145,6 +145,11 @@ See my tutorial: [Automated Table of Contents for Jekyll with Highlighting](/tec
 
 ## 4.3 Add Dark/Light Mode Switch
 
-TODO
+If you are using [Disqus](https://disqus.com/) to generate comment widget, I would recommend you write css code to generate a dark mode. You can check my [css files](https://github.com/epigone707/epigone707.github.io/blob/master/css/main.scss#L24) on how to do it.
 
+If you don't use Disqus, then there's a tool called [Darkreader](https://github.com/darkreader/darkreader) that can automatically generate a dark mode for your website. 
+
+The reason is, Darkreader doesn't work properly with Disqus. See my post about this [Do not use Darkreader and Disqus at the same time](https://epigone707.github.io/tech/2022/12/21/darkreader.html#intro)
+
+# End
 If you have any questions or want to share your thoughts, please leave a comment. I will be notified via email:)
