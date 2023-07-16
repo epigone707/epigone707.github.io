@@ -215,29 +215,18 @@
 
   h1 {
     font-size: 32px;
-
-    @include media-query($content-width) {
-      font-size: 28px;
-    }
   }
 
   h2 {
     font-size: 26px;
-
-    @include media-query($content-width) {
-      font-size: 22px;
-    }
   }
 
   h3 {
     font-size: 20px;
-
-    @include media-query($content-width) {
-      font-size: 18px;
-    }
   }
 }
 
+// wrapper for table of contents sidebar
 #toc-wrapper {
   border-left: 1px solid $grey-color-light;
   width: $side-width;
@@ -249,26 +238,20 @@
   overflow-x: hidden;
   max-height: calc(100vh - 9rem);
 
+  // when screen shrinks to a certain width, hide the table of contents.
   @include media-query($content-width) {
     font-size: 18px;
+    visibility: hidden;
+    border-left: none;
   }
 }
 
+// invisible box to make sure the wrappers in page-content,
+// site-header and site-footer are centered horizontally.
 .invisible-box {
   width: $side-width;
   visibility: hidden;
   flex-shrink: 1;
-}
-
-@media (max-width: $content-width) {
-  #toc-wrapper {
-    visibility: hidden;
-    border-left: none;
-  }
-
-  .invisible-box {
-    visibility: hidden;
-  }
 }
 
 // make sure when user clicks anchor links, the section header won't disappear behind sticky top navigation bar.
