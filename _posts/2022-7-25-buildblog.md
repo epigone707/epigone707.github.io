@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Build Personal Blog with Jekyll and Github Pages"
-description: "2022 Tutorial: Build Personal Blog with Jekyll and Github Pages"
+description: "Tutorial: Build a Personal Blog with Jekyll and Github Pages"
 category: tech
 tags: web
 modify: 2022-07-25 18:09:00
@@ -122,9 +122,9 @@ See my tutorial [Syntax highlighting with Rouge in Jekyll](/tech/2022/12/17/tech
 
 ## 4.2 Add Table of Contents to Your Post
 
-### 4.2.1 Use Jekyll TOC Generator
+### 4.2.1 Basic TOC
 
-Add following code into your markdown file:
+We can use Jekyll built-in TOC generator! Just add following code into your markdown file:
 
 ```markdown
 - TOC
@@ -133,9 +133,13 @@ Add following code into your markdown file:
 
 It will generate a table of contents for your post. See my post [C++ Interview Note](/tech/2022/12/18/tech.html) as an example.
 
-### 4.2.2 Use JS
+### 4.2.2 Customizable TOC
 
-Automated Table of Contents for Jekyll with Highlighting todo
+The above method is not customizable, since it is static, and the element is in the post content, so it is hard to make it as a sidebar. 
+
+What we want is: (1) customizable, (2) automatically highlight the current section, (3) as a sidebar.
+
+See my tutorial: [Automated Table of Contents for Jekyll with Highlighting](/tech/2023/7/15/toc.html).
 
 ## 4.3 Add Dark/Light Mode Switch
 
