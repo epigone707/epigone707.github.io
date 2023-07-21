@@ -258,3 +258,17 @@
 [id] {
   scroll-margin-top: 70px; // 1
 }
+
+// description of the post in tag page
+.post i {
+  color: $grey-color;
+}
+
+.post-list {
+  i {
+    color: $grey-color;
+  }
+  h2 {
+    margin-bottom: 1px;
+  }
+}

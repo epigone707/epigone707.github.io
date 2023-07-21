@@ -135,11 +135,11 @@ It will generate a table of contents for your post. See my post [C++ Interview N
 
 ### 4.2.2 Customizable TOC
 
-The above method is not customizable, since it is static, and the element is in the post content, so it is hard to make it as a sidebar. 
+The above method is not customizable, since it is static, and the element is in the post content, so it is hard to make it as a sidebar.
 
 What we want is: (1) customizable, (2) automatically highlight the current section, (3) as a sidebar.
 
-See my tutorial: [Automated Table of Contents for Jekyll with Highlighting](/tech/2023/7/15/toc.html).
+See my tutorial: [Automated Table of Contents for Jekyll with Highlighting](/tech/2023/07/15/toc.html).
 
 ## 4.3 Add Dark/Light Mode Switch
 
