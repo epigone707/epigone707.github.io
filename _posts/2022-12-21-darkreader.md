@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Do not use Darkreader and Disqus at the same time"
-description: ""
+description: "You may hear that Darkreader is a automatic tool to generate a dark mode for your website. However, if you also use Disqus to build comments/discussion section for your website/blog, be careful! They don't work well together."
 category: tech
 tags: web
 modify: 2022-12-21 11:55:00
