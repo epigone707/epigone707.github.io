@@ -6,10 +6,12 @@
 
 // css variables
 html {
-  background: var(--background-color);
+  background-color: var(--background-color);
+
   scroll-behavior: smooth;
   --text-color: #111;
-  --background-color: #fdfdfd;
+  // --background-color: #fdfdfd;
+  --background-color: #fff;
 
   --link-color: #2a7ae2;
   --darken-link-color: #1b66c8; // visited link color
@@ -22,9 +24,13 @@ html {
 }
 
 html[data-theme="dark"] {
-  background: var(--background-color);
-  --text-color: rgb(221, 218, 214);
+  background-color: var(--background-color);
+  // transition: background 1s ease-in-out, color 1s ease-in-out,
+  //   background-color 1s ease-in-out;
+  // --text-color: rgb(221, 218, 214);
+  --text-color: #ccc;
   --background-color: rgb(25, 27, 28);
+  // --background-color: #2a2d2f;
 
   --link-color: #3d95e5;
   --darken-link-color: #1d7fd9;
@@ -32,7 +38,7 @@ html[data-theme="dark"] {
 }
 
 // scss variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-family: Noto Sans, Helvetica, Arial, sans-serif;
 $base-font-size: 16px;
 $base-font-weight: 400;
 $small-font-size: $base-font-size * 0.875;
