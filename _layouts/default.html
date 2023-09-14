@@ -5,6 +5,20 @@
 
 <body data-spy="scroll" data-target="#toc" data-offset="75">
 
+  <div id="myOverlay" class="overlay">
+    <span class="closebtn" onclick="closeSearch()" title="Close Overlay">x</span>
+    <div class="overlay-content">
+      <input type="search" name="search" id="search-input" placeholder="Search..">
+      <!-- <br> -->
+      <ul id="results-container"></ul>
+    </div>
+  </div>
+
+  <div id="search-container">
+
+
+  </div>
+
   {% include header.html %}
 
 
