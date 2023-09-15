@@ -15,7 +15,11 @@
         <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
         {% endif %}
         {% endfor %}
-        <i id="search-icon" class="fa fa-search" onclick="openSearch()"></i>
+        <span id="search-icon" class="fa-stack" onclick="openSearch()">
+          <i class="fa fa-circle fa-stack-2x icon-background"></i>
+          <i class="fa fa-search fa-stack-1x"></i>
+        </span>
+        <!-- <i id="search-icon" class="fa fa-search" onclick="openSearch()"></i> -->
         <div id="checkbox-div">
           <input type="checkbox" class="checkbox" id="checkbox" onclick="toggle_mode_switch()">
           <label for="checkbox" class="label">
@@ -28,12 +32,7 @@
         <script>
           checkmode();
         </script>
-
-
-
       </div>
-
-
 
     </nav>
 

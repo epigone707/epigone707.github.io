@@ -36,7 +36,7 @@ Follow the [Jekyll Quickstart](https://jekyllrb.com/docs/) and [Step by Step Tut
 
 ## 2.2 Start to Build
 
-Now we want a personal blog. The easiest way is to find your favorite template in [jekyll existing sites list](https://github.com/jekyll/jekyll/wiki/sites) and fork the repo. After you clone it to your local repository, don't forget to modify `_config.yml`. There're many beautiful exmaples on Github, find them! 
+Now we want a personal blog. The easiest way is to find your favorite template in [jekyll existing sites list](https://github.com/jekyll/jekyll/wiki/sites) and fork the repo. After you clone it to your local repository, don't forget to modify `_config.yml`. There're many beautiful exmaples on Github, find them!
 
 **And of course, you can fork [my website](https://github.com/epigone707/epigone707.github.io) so that you can skip following sections!**
 
@@ -147,9 +147,14 @@ See my tutorial: [Automated Table of Contents for Jekyll with Highlighting](/tec
 
 If you are using [Disqus](https://disqus.com/) to generate comment widget, I would recommend you write css code to generate a dark mode. You can check my [css files](https://github.com/epigone707/epigone707.github.io/blob/master/css/main.scss#L24) on how to do it.
 
-If you don't use Disqus, then there's a tool called [Darkreader](https://github.com/darkreader/darkreader) that can automatically generate a dark mode for your website. 
+If you don't use Disqus, then there's a tool called [Darkreader](https://github.com/darkreader/darkreader) that can automatically generate a dark mode for your website.
 
 The reason is, Darkreader doesn't work properly with Disqus. See my post about this [Do not use Darkreader and Disqus at the same time](https://epigone707.github.io/tech/2022/12/21/darkreader.html#intro)
 
+## 4.4 Search Bar
+
+I'm using [Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search) and this [tutorial](https://beingtechnicalwriter.com/jekyllsearch/) may help you.
+
 # End
+
 If you have any questions or want to share your thoughts, please leave a comment. I will be notified via email:)

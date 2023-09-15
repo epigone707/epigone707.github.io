@@ -59,15 +59,36 @@
   width: 100%;
   border-radius: 15px;
   background: white;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .overlay input[type="search"]:hover {
   background: #f1f1f1;
 }
 
+#search-icon {
+  cursor: pointer;
+  margin-right: 10px;
+
+  .icon-background {
+    // transparent
+    color: transparent;
+  }
+}
+
+#search-icon:hover {
+  .icon-background {
+    color: var(--inline-code-bgcolor);
+  }
+}
+
 #results-container {
   text-align: left;
   margin-top: 20px;
+  margin-left: 10px;
 
   a:hover {
     color: var(--link-color);
