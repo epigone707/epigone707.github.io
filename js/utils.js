@@ -15,7 +15,6 @@ function closeSearch() {
 }
 
 function clickOnOverlay(e) {
-    console.log("click on overlay");
     if ($(e.target).closest("#search-input").length === 0) {
         closeSearch();
     }
