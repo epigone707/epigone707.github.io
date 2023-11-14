@@ -9,8 +9,6 @@ modify: 2023-09-13 18:09:00
 
 ## 1. 前言
 
-首先，美国找工和国内找工是不一样的。
-
 美国找工主要做 leetcode 就行了。国内除了 leetcode 还要背很多八股文，非常恶心。本人是 24 届美硕，因为父母希望我回国，所以我临时改变方向开始找国内岗，从八月中旬开始投，匆忙开始准备八股文。
 
 本人所有笔记公开在这里，希望能帮助到大家。我找工的主要方向为后端开发、C/C++、Golang，所以笔记中主要是投递这些岗位需要了解的知识。
@@ -23,7 +21,6 @@ modify: 2023-09-13 18:09:00
 
 - 本人绝大部分的笔记都在这个 notion： [八股文+leetcode 笔记总集](https://epigone707.notion.site/epigone707/96e9a6314cbd48349e749a0c2e134746)
 - 操作系统的大部分笔记在这个网页中： [操作系统笔记（English）](https://epigone707.github.io/tech/2023/07/13/os.html)
-- C++有小部分笔记在这个网页中：[C++笔记（English）](https://epigone707.github.io/tech/2022/12/18/tech.html)
 
 在学习过程中见到的一些很棒的网站：
 
@@ -35,5 +32,5 @@ modify: 2023-09-13 18:09:00
 
 ## 3. 个人找工方式
 
-- 美国：我去年找美国暑期实习主要用地 Linkedin, Handshake, 以及 Github 上一些人自行组织的 job board。
+- 美国：我去年找美国暑期实习主要用 Linkedin, Handshake, 以及 Github 上一些人自行组织的 job board。
 - 国内：我主要用 Boss 直聘，牛客网，Github 上的 job board。
