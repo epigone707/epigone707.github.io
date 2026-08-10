@@ -3,36 +3,43 @@
 This is my personal website built with jekyll. The link is https://epigone707.github.io/about/
 
 
-## Build
-Since Jekyll is a static site generator, it has to build the site before we can view it. Run either of the following commands to build your site:
+## Run locally
 
+Since Jekyll is a static site generator, it has to build the site before we can view it.
 
-`jekyll build` - Builds the site and outputs a static site to a directory called _site.
+### 1. Install dependencies
 
-`jekyll serve` - Does jekyll build and runs it on a local web server at http://localhost:4000, rebuilding the site any time you make a change.
+Gems are installed into a project-local `vendor/bundle/` directory (no sudo needed,
+even if Ruby itself was installed system-wide via apt):
+
+```sh
+bundle config set --local path 'vendor/bundle'
+bundle install
+```
+
+### 2. Build & serve
+
+Always run Jekyll through `bundle exec` so it uses the local bundle:
+
+- `bundle exec jekyll build` — Builds the site and outputs a static site to a directory called `_site`.
+- `bundle exec jekyll serve` — Builds the site and runs it on a local web server at http://localhost:4000, rebuilding the site any time you make a change.
+- `bundle exec jekyll serve --livereload` — Same as above, plus auto-refreshes your browser on changes.
 
 ## Embedding novel content from GitHub
 
 Any post can declare an `embed:` front-matter field pointing at a GitHub file.
-The `_plugins/embed_novel.rb` plugin automatically fetches the latest content at
-build time (no manual steps) and uses it **verbatim** as the post body, keeping
-the source file's own headings (title, 序章, chapters) unchanged. Example front
-matter:
+The `_plugins/embed_novel.rb` plugin automatically fetches the **latest** content
+at build time (no manual steps, no cache). Example front matter:
 
 ```yaml
 ---
 layout: post
-title: "毁灭联邦的魔女 1-5"
+title: "cyberpunk 1-5"
 category: literature
-tags: novel 毁灭联邦的魔女
+tags: novel
 embed: https://github.com/epigone707/novel-cyberpunk/blob/master/novel%201-5.md
 ---
 ```
-
-- The fetched file is cached in `_util/.embed_cache/` so offline builds still work.
-- GitHub Pages' default build ignores custom plugins; the included
-  `.github/workflows/jekyll.yml` deploys via GitHub Actions so the plugin runs on
-  the live site too.
 
 ## Make your own website
 

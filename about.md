@@ -15,7 +15,7 @@ Know more about me:
 - [LinkedIn](https://www.linkedin.com/in/yanfu-guo/)
 - [Github](https://github.com/epigone707)
 - [OP.GG(League of Legends)](https://na.op.gg/summoners/na/AsiaNO1Support)
-- [Tracker.gg(Valorant)](https://tracker.gg/valorant/profile/riot/Ganyu%235210/overview)
+- [Tracker.gg(Valorant)](https://tracker.gg/valorant/profile/riot/Ganyu%234396/overview?platform=pc&playlist=competitive)
 - [Source code of this website](https://github.com/epigone707/epigone707.github.io)
 
 <br/>

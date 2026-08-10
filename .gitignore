@@ -5,5 +5,5 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 
-# embed_novel plugin cache (fetched remote novel content)
-_util/.embed_cache/
+# Local bundler gems (no sudo install)
+vendor/bundle/

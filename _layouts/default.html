@@ -3,7 +3,7 @@
 
 {% include head.html %}
 
-<body data-spy="scroll" data-target="#toc" data-offset="75">
+<body>
 
   <div id="myOverlay" class="overlay" onclick="clickOnOverlay(event)">
     <!-- <span class="closebtn" onclick="closeSearch()" title="Close Overlay">x</span> -->
@@ -35,6 +35,8 @@
   <script type="text/javascript">
     $(document).ready(function () {
       $('#toc').toc({ listType: 'ul', headers: 'h1, h2, h3' });
+      // custom scroll-spy: works with non-ASCII (e.g. Chinese) heading ids
+      initScrollSpy();
     });
   </script>
 
