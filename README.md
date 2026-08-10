@@ -35,7 +35,6 @@ at build time (no manual steps, no cache). Example front matter:
 ---
 layout: post
 title: "cyberpunk 1-5"
-category: literature
 tags: novel
 embed: https://github.com/epigone707/novel-cyberpunk/blob/master/novel%201-5.md
 ---
