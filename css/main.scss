@@ -4,6 +4,14 @@
 
 @charset "utf-8";
 
+// Import partials from `sass_dir` (defaults to `_sass`)
+@use "base";
+@use "layout";
+@use "song";
+@use "toc";
+@use "searchbar";
+@use "scrollbar";
+
 // css variables
 html {
   background-color: var(--background-color);
@@ -37,35 +45,3 @@ html[data-theme="dark"] {
   --inline-code-bgcolor: rgba(110, 118, 129, 0.4);
 }
 
-// scss variables
-$base-font-family: Noto Sans, Helvetica, Arial, sans-serif;
-$base-font-size: 16px;
-$base-font-weight: 400;
-$small-font-size: $base-font-size * 0.875;
-$base-line-height: 1.5;
-
-$spacing-unit: 30px;
-
-$text-color: var(--text-color);
-
-$grey-color: #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark: darken($grey-color, 25%);
-
-// Width of the content area
-$content-width: 800px;
-
-// when on phone
-$on-palm: 600px;
-
-// sidebar width
-$side-width: 240px;
-
-@mixin media-query($device) {
-  @media screen and (max-width: $device) {
-    @content;
-  }
-}
-
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import "base", "layout", "song", "toc", "searchbar", "scrollbar";

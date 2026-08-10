@@ -1,0 +1,9 @@
+# Jekyll build output
+_site/
+
+# Jekyll caches/metadata
+.jekyll-cache/
+.jekyll-metadata
+
+# embed_novel plugin cache (fetched remote novel content)
+_util/.embed_cache/
