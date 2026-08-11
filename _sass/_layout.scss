@@ -232,6 +232,36 @@
   line-height: 1;
 }
 
+// Epigraph-style description shown at the top of a post page
+.post-description {
+  max-width: 540px;
+  margin: 30px auto 0;
+  padding: 0 12px;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 19px;
+  line-height: 1.7;
+  color: var(--text-color);
+  opacity: 0.78;
+
+  // thin accent rules above & below, like a classic book epigraph
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 1px;
+    margin: 0 auto 16px;
+    background: var(--link-color);
+    opacity: 0.45;
+  }
+
+  &::after {
+    margin: 16px auto 0;
+  }
+}
+
 .post-content {
   margin-bottom: $spacing-unit;
 

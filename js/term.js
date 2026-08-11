@@ -53,9 +53,10 @@ $('.my-terminal').terminal({
         }
     },
 }, {
-    greetings: 'Connected to server epigone707\n\n'
-        + 'I\'m Yanfu and I\'m a solo master rank player in League of Legends, and Ascendent rank player in Valorant. I play games (especially PVP games like CSGO, Valorant), read manga (especially JP and KR), write novels (never published cuz they\'re all shit) and watch anime (of course JP animes, 99% Chinese animes are similar to my novels).\n'
-        + 'type `help` to see the list of commands\n',
+    greetings: 'Connected to server epigone707...\n\n'
+        + 'I\'m Yanfu, a developer that is gonna be buried by AI:( \n\n'
+        + 'I play games: League of Legends (Master Rank), Valorant (Immortal Rank), CSGO, APEX, Arknights), read manga (especially JP and KR), write novels (only published here cuz they\'re all shit) and watch anime (of course JP animes, 99% Chinese animes are similar to my novels).\n\n'
+        + 'Type `help` to see the list of commands\n',
     prompt: '> ',
     history: true,
     // size of the history
