@@ -4,7 +4,7 @@
 console.log("term.js loaded");
 let username = "guest";
 
-let dir_list = ['about/', 'life/', 'literature/', 'tech/', 'allposts/']
+let dir_list = ['life/', 'literature/', 'tech/', 'allposts/']
 
 $('.my-terminal').terminal({
     fuck: function () {

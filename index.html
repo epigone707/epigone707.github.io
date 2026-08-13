@@ -4,32 +4,34 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <h1 class="page-heading">About Me</h1>
 
-  <ul class="post-list">
-    {% assign posts_by_modify = site.posts | sort:'modify' | reverse %}
-    {% for post in posts_by_modify%}
-    <li>
-      <span class="post-meta">{{ post.modify | date: "%b %-d, %Y" }}</span>
+  <blockquote>
+    "If you want to be happy, be."
+    --<cite> Leo Tolstoy </cite>
+  </blockquote>
 
-      <h2>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </h2>
-      {% if post.description != "" %}
-      <i>{{ post.description }}</i>
-      <br>
-      {% endif %}
+  <div class='my-terminal'></div>
+  <br>
 
-      <span> [
-        {% for tag in post.tags %}
-        {% capture tag_name %}{{ tag }}{% endcapture %}
-        <a href="/tag/{{ tag_name }}">
-          <nobr>{{tag_name}}</nobr>
-        </a>
-        {% endfor %}
-        ]</span>
-    </li>
-    {% endfor %}
+  Know more about me:
+
+  <ul>
+    <li><a href="https://www.linkedin.com/in/yanfu-guo/">LinkedIn</a></li>
+    <li><a href="https://github.com/epigone707">Github</a></li>
+    <li><a href="https://na.op.gg/summoners/na/AsiaNO1Support">OP.GG(League of Legends)</a></li>
+    <li><a href="https://tracker.gg/valorant/profile/riot/Ganyu%234396/overview?platform=pc&playlist=competitive">Tracker.gg(Valorant)</a></li>
+    <li><a href="https://github.com/epigone707/epigone707.github.io">Source code of this website</a></li>
   </ul>
+
+  <br/>
+
+  <div id="utterances-widget">
+  </div>
+  <script>
+    addUtterances();
+  </script>
+
+  {% include my_term.html %}
 
 </div>
