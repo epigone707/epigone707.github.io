@@ -17,6 +17,10 @@ html {
   background-color: var(--background-color);
 
   scroll-behavior: smooth;
+  // Always reserve space for the vertical scrollbar so the sticky header
+  // (and everything else) doesn't shift when navigating between pages that
+  // do and don't overflow the viewport.
+  overflow-y: scroll;
   --text-color: #111;
   // --background-color: #fdfdfd;
   --background-color: #fff;

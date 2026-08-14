@@ -88,7 +88,9 @@
     // ---- the current section ----
     &.active {
       color: var(--link-color);
-      font-weight: 600;
+      // Fake bold with a text-shadow instead of font-weight. A real
+      // font-weight bump widens the link and shifts the whole nav bar.
+      text-shadow: 0 0 0.6px currentColor;
 
       &::after {
         transform: scaleX(1);
