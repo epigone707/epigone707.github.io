@@ -28,17 +28,38 @@ Always run Jekyll through `bundle exec` so it uses the local bundle:
 ## Embedding novel content from GitHub
 
 Any post can declare an `embed:` front-matter field pointing at a GitHub file.
-The `_plugins/embed_novel.rb` plugin automatically fetches the **latest** content
-at build time (no manual steps, no cache). Example front matter:
+The `_plugins/embed_novel.rb` plugin reads the file at build time. For a private
+novel repository, the GitHub Actions workflow checks it out into `_novel_source`
+and the plugin reads from that checkout. The post URLs can stay unchanged.
 
 ```yaml
 ---
 layout: post
 title: "cyberpunk 1-5"
 tags: novel
-embed: https://github.com/epigone707/novel-cyberpunk/blob/master/novel%201-5.md
+embed: https://github.com/epigone707/novel-cyberwitch/blob/master/novel%201-5.md
 ---
 ```
+
+### Private novel repository setup
+
+1. Create a fine-grained personal access token that has access only to
+   `epigone707/novel-cyberwitch`, with **Contents: Read-only** permission.
+2. In this website repository, go to **Settings → Secrets and variables →
+   Actions** and add a repository secret named `NOVEL_REPO_TOKEN` containing
+   the token.
+3. Keep the token out of the repository. The workflow uses it only to check out
+   the novel repository during the build.
+
+For local builds, check out the novel repository next to the website files:
+
+```sh
+gh repo clone epigone707/novel-cyberwitch _novel_source
+NOVEL_SOURCE_DIR=_novel_source bundle exec jekyll serve
+```
+
+The local checkout directory is ignored by Git. Without `NOVEL_SOURCE_DIR`, the
+plugin retains its public-URL fetching behavior.
 
 ## Make your own website
 

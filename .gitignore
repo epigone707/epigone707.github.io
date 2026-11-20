@@ -7,3 +7,6 @@ _site/
 
 # Local bundler gems (no sudo install)
 vendor/bundle/
+
+# Private novel source checkout
+_novel_source/

@@ -22,6 +22,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Checkout novel source
+        uses: actions/checkout@v4
+        with:
+          repository: epigone707/novel-cyberwitch
+          ref: master
+          token: ${{ secrets.NOVEL_REPO_TOKEN }}
+          path: _novel_source
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -36,6 +44,7 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+          NOVEL_SOURCE_DIR: _novel_source
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

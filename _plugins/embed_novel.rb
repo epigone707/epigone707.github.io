@@ -2,6 +2,7 @@
 
 require "net/http"
 require "json"
+require "uri"
 
 # _plugins/embed_novel.rb
 #
@@ -14,7 +15,7 @@ require "json"
 #   layout: post
 #   title: "毁灭联邦的魔女 1-5"
 #   description: "..."
-#   embed: https://github.com/epigone707/novel-cyberpunk/blob/master/novel%201-5.md
+#   embed: https://github.com/epigone707/novel-cyberwitch/blob/master/novel%201-5.md
 #   ---
 module EmbedNovel
   module_function
@@ -31,9 +32,25 @@ module EmbedNovel
     "https://raw.githubusercontent.com/#{owner}/#{repo}/#{branch}/#{path}"
   end
 
-  # Fetch remote content as UTF-8 text. Raises on failure (no silent fallback).
+  # Read from a checked-out source repo when configured; otherwise fetch publicly.
   def fetch(url)
-    uri = URI(url)
+    source_dir = ENV["NOVEL_SOURCE_DIR"]
+    unless source_dir.to_s.strip.empty?
+      url = url.to_s.strip
+      m = url.match(%r{github\.com/[^/]+/[^/]+/blob/[^/]+/(.+)$}) ||
+          url.match(%r{raw\.githubusercontent\.com/[^/]+/[^/]+/[^/]+/(.+)$})
+      raise ArgumentError, "unsupported embed URL: #{url.inspect}" unless m
+
+      root = File.expand_path(source_dir)
+      path = File.expand_path(URI::DEFAULT_PARSER.unescape(m[1]), root)
+      unless path.start_with?("#{root}#{File::SEPARATOR}")
+        raise ArgumentError, "embed path is outside novel source directory: #{url.inspect}"
+      end
+
+      return File.read(path, encoding: "UTF-8")
+    end
+
+    uri = URI(to_raw_url(url))
     res = Net::HTTP.get_response(uri)
     raise "HTTP #{res.code}" unless res.is_a?(Net::HTTPSuccess)
 
@@ -75,8 +92,7 @@ module EmbedNovel
     url = post.data["embed"]
     return false unless url && !url.to_s.strip.empty?
 
-    raw_url = to_raw_url(url)
-    raw = fetch(raw_url) # raises on failure -> loud build error
+    raw = fetch(url) # raises on failure -> loud build error
     intro, body = split_intro_body(raw)
     post.content = build_content(post, intro, body)
     true
